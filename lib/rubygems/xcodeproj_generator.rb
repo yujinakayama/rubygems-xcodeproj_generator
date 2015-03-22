@@ -1,4 +1,4 @@
-require "rubygems/xcodeproj_generator/version"
+require 'rubygems/xcodeproj_generator/version'
 
 module Rubygems
   module XcodeprojGenerator

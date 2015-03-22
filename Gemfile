@@ -4,4 +4,5 @@ gemspec
 
 group :development do
   gem 'rake', '~> 10.0'
+  gem 'rubocop'
 end

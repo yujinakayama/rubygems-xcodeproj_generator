@@ -1,4 +1,7 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in rubygems-xcodeproj_generator.gemspec
 gemspec
+
+group :development do
+  gem 'rake', '~> 10.0'
+end

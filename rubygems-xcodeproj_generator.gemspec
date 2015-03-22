@@ -5,7 +5,7 @@ require 'rubygems/xcodeproj_generator/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'rubygems-xcodeproj_generator'
-  spec.version       = Rubygems::XcodeprojGenerator::VERSION
+  spec.version       = Rubygems::XcodeprojGenerator::Version.to_s
   spec.authors       = ['Yuji Nakayama']
   spec.email         = ['nkymyj@gmail.com']
 

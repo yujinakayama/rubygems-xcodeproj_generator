@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/yujinakayama/rubygems-xcodeproj_generator.svg?branch=master&style=flat)](https://travis-ci.org/yujinakayama/rubygems-xcodeproj_generator)
+[![Coverage Status](http://img.shields.io/coveralls/yujinakayama/rubygems-xcodeproj_generator/master.svg?style=flat)](https://coveralls.io/r/yujinakayama/rubygems-xcodeproj_generator)
 
 # Rubygems::XcodeprojGenerator
 

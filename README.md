@@ -34,11 +34,11 @@ Then add the following code to your Rakefile:
 require 'rake/extensiontask'
 require 'rubygems/xcodeproj_generator/rake_task'
 
-Rake::ExtensionTask.new('your-comple-task-name')
+Rake::ExtensionTask.new('your-gem-name')
 
 Rubygems::XcodeprojGenerator::RakeTask.new do |project|
   project.name = 'your-xcode-project-name'
-  project.build_command = 'bundle exec rake your-comple-task-name'
+  project.build_command = 'bundle exec rake compile'
 end
 ```
 

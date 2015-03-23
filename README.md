@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/yujinakayama/rubygems-xcodeproj_generator.svg?branch=master&style=flat)](https://travis-ci.org/yujinakayama/rubygems-xcodeproj_generator)
+
 # Rubygems::XcodeprojGenerator
 
 Provides a Rake task for generating an Xcode project for C extension development.

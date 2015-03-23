@@ -9,9 +9,10 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Yuji Nakayama']
   spec.email         = ['nkymyj@gmail.com']
 
-  spec.summary       = 'TODO: Write a short summary, because Rubygems requires one.'
-  spec.description   = 'TODO: Write a longer description or delete this line.'
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = 'Provides a Rake task for generating an Xcode project ' \
+                       'for C extension development.'
+  spec.description   = spec.summary
+  spec.homepage      = 'https://github.com/yujinakayama/rubygems-xcodeproj_generator'
   spec.license       = 'MIT'
 
   spec.files         =

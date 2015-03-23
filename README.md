@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/yujinakayama/rubygems-xcodeproj_generator.svg?branch=master&style=flat)](https://travis-ci.org/yujinakayama/rubygems-xcodeproj_generator)
 [![Coverage Status](http://img.shields.io/coveralls/yujinakayama/rubygems-xcodeproj_generator/master.svg?style=flat)](https://coveralls.io/r/yujinakayama/rubygems-xcodeproj_generator)
+[![Code Climate](https://img.shields.io/codeclimate/github/yujinakayama/rubygems-xcodeproj_generator.svg?style=flat)](https://codeclimate.com/github/yujinakayama/rubygems-xcodeproj_generator)
 
 # Rubygems::XcodeprojGenerator
 

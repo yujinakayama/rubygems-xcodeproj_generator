@@ -1,39 +1,49 @@
 # Rubygems::XcodeprojGenerator
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/rubygems/xcodeproj_generator`. To experiment with that code, run `bin/console` for an interactive prompt.
+Provides a Rake task for generating an Xcode project for C extension development.
 
-TODO: Delete this and the text above, and describe your gem
+Within the generated Xcode project:
 
-## Installation
+* Code completion is enabled, including Ruby internal functions and macros.
+* You can build the extension by running **⌘B**, though this is just for checking while development and not for production release.
 
-Add this line to your application's Gemfile:
+## Basic Usage
+
+Add the following development dependencies to your extension's Gemfile or gemspec:
 
 ```ruby
+gem 'rake-compiler'
 gem 'rubygems-xcodeproj_generator'
 ```
 
-And then execute:
+And execute:
 
-    $ bundle
+```bash
+$ bundle install
+```
 
-Or install it yourself as:
+Then add the following code to your Rakefile:
 
-    $ gem install rubygems-xcodeproj_generator
+```ruby
+require 'rake/extensiontask'
+require 'rubygems/xcodeproj_generator/rake_task'
 
-## Usage
+Rake::ExtensionTask.new('your-comple-task-name')
 
-TODO: Write usage instructions here
+Rubygems::XcodeprojGenerator::RakeTask.new do |project|
+  project.name = 'your-xcode-project-name'
+  project.build_command = 'bundle exec rake your-comple-task-name'
+end
+```
 
-## Development
+And run:
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `bin/console` for an interactive prompt that will allow you to experiment.
+```bash
+$ bundle exec rake generate_xcode_project
+```
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release` to create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+## License
 
-## Contributing
+Copyright (c) 2015 Yuji Nakayama
 
-1. Fork it ( https://github.com/[my-github-username]/rubygems-xcodeproj_generator/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+See the [LICENSE.txt](LICENSE.txt) for details.

@@ -8,7 +8,8 @@ module Rubygems
       include ::Rake::DSL if defined?(::Rake::DSL)
 
       def initialize(name = :generate_xcode_project)
-        unless ::Rake.application.last_comment
+        last_message = ::Rake::VERSION.to_f >= 12.0 ? ::Rake.application.last_description : ::Rake.application.last_comment
+        unless last_message
           desc 'Generate an Xcode project for C extension development'
         end
 

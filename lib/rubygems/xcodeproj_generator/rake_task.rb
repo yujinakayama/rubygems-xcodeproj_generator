@@ -8,7 +8,7 @@ module Rubygems
       include ::Rake::DSL if defined?(::Rake::DSL)
 
       def initialize(name = :generate_xcode_project)
-        last_message = ::Rake::VERSION.to_f >= 12.0 ? ::Rake.application.last_description : ::Rake.application.last_comment
+        last_message = last_comment_deprecated? ? ::Rake.application.last_description : ::Rake.application.last_comment
         unless last_message
           desc 'Generate an Xcode project for C extension development'
         end
@@ -23,6 +23,12 @@ module Rubygems
 
           puts "Xcode project has been generated to #{project.path}."
         end
+      end
+
+      private
+
+      def last_comment_deprecated?
+        Gem.loaded_specs['rake'].version >= Gem::Version.new('12.0.0')
       end
     end
   end

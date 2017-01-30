@@ -18,7 +18,7 @@ module Rubygems
       private
 
       def base_ruby_header_path
-        fail NotImplementedError
+        raise NotImplementedError
       end
 
       def platform_ruby_header_path

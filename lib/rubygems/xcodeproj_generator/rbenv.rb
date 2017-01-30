@@ -3,8 +3,8 @@ require 'rubygems/xcodeproj_generator/abstract_ruby_header_provider'
 module Rubygems
   module XcodeprojGenerator
     class Rbenv < AbstractRubyHeaderProvider
-      DEFAULT_ROOT_PATH = '~/.rbenv'
-      VERSIONS_PATH = 'versions'
+      DEFAULT_ROOT_PATH = '~/.rbenv'.freeze
+      VERSIONS_PATH = 'versions'.freeze
 
       def initialize(root_path = nil)
         root_path ||= ENV['RBENV_ROOT'] || DEFAULT_ROOT_PATH

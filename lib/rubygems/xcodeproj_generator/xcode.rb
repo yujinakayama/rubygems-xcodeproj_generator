@@ -3,10 +3,10 @@ require 'rubygems/xcodeproj_generator/abstract_ruby_header_provider'
 module Rubygems
   module XcodeprojGenerator
     class Xcode < AbstractRubyHeaderProvider
-      DEFAULT_ROOT_PATH = '/Applications/Xcode.app'
-      OSX_SDKS_PATH = 'Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs'
+      DEFAULT_ROOT_PATH = '/Applications/Xcode.app'.freeze
+      OSX_SDKS_PATH = 'Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs'.freeze
       RUBY_INCLUDE_PATH_PATTERN =
-        'System/Library/Frameworks/Ruby.framework/Versions/*/usr/include/*'
+        'System/Library/Frameworks/Ruby.framework/Versions/*/usr/include/*'.freeze
 
       def initialize(root_path = nil)
         root_path ||= DEFAULT_ROOT_PATH

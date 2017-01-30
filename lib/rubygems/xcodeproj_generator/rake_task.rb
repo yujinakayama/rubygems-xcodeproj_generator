@@ -7,8 +7,16 @@ module Rubygems
     class RakeTask < ::Rake::TaskLib
       include ::Rake::DSL if defined?(::Rake::DSL)
 
+      def self.last_description
+        if ::Rake.application.respond_to?(:last_description)
+          ::Rake.application.last_description
+        else
+          ::Rake.application.last_comment
+        end
+      end
+
       def initialize(name = :generate_xcode_project)
-        unless ::Rake.application.last_comment
+        unless self.class.last_description
           desc 'Generate an Xcode project for C extension development'
         end
 
